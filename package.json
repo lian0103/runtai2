@@ -10,10 +10,11 @@
   "author": "lien",
   "license": "ISC",
   "dependencies": {
+    "bootstrap": "^4.4.1",
+    "gulp-imagemin": "^5.0.3",
     "gulp-util": "^3.0.8",
     "jquery": "^3.5.1",
-    "webpack-cli": "^3.3.11",
-    "gulp-imagemin": "^5.0.3"
+    "webpack-cli": "^3.3.11"
   },
   "devDependencies": {
     "browser-sync": "^2.26.3",
