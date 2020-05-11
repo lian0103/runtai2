@@ -1,22 +1,163 @@
-$basicFontSize : 24px;
+$mainColor:rgb(30, 157, 152);
+$secondColor:#CC6;
+$mainColorOpacity:rgba(30, 157, 152,.3);
+
+$fontColorWhite:#fff; 
+$fontColorBlack:#323232;
+
+$fontSizeSmall: 14px;
+$fontSizeMedium: 16px;
+$fontSizeTitle: 24px;
+
+$grayBackGroung : #DBDFE6;
 
 body{
-    font-family: 'Noto Sans TC', sans-serif;
-    //font-family: 'Noto Serif TC', serif;
+    //font-family: 'Noto Sans TC', sans-serif;
+    font-family: 'Noto Serif TC', serif;
+
     font-weight: 300;
     width: 100vw;
     min-height: 100vh;
-    font-size: $basicFontSize;
-    background-image: url('../images/demo03.jpg');
+    font-size: $fontSizeTitle;
     background-size: cover;
-    h1{
-        font-size: 10.5rem;
-        background-color: rgba(255,255,255,.3);
-        font-weight: 900;
-        
+    .navbar{
+        background-color: $grayBackGroung;
+        padding-top: 0;
+        padding-bottom: 0;
     }
-    .logoImg{
+
+    .mdNone{
+        display: none;
+    }
+
+    .linkSpanBox{
+        font-size: .85rem;
+        text-decoration: none;
+        background-color: none;
+        height: 35px;
+        line-height: 35px;
         display: block;
-        border-radius: 50%;
+        padding: 0 12px;
+        color: $fontColorBlack;
+        cursor: pointer;
+        &:hover,&:active{
+            color: #fff !important;
+            background-color: $mainColor;
+        }
+    }
+
+    .navbarSecond{
+        background-color: $secondColor !important;
+        .logoImg{
+            width: 50px;
+            padding: 0 3px;
+            display: inline-block;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        span{
+            color: $fontColorWhite;
+            letter-spacing: .4rem;
+            font-size: 1.3rem;
+            line-height: 1.5;
+            font-weight: normal;
+            height: 70px;
+            line-height: 70px;
+            text-shadow: 2px 1px 1px rgba(0,0,0,0.2);
+            position: relative;
+            &::before{
+                content: 'RUNTAI';
+                position: absolute;
+                left: 6px;
+                bottom: 16px;
+                font-size: .6rem;
+                font-weight: 300;
+                text-shadow:none;
+                letter-spacing: 2rem;
+                text-align: center;
+                width: 100%;
+                height: 14px;
+
+            }
+        }
+        .linkInfo{
+            font-size: .7rem;
+            flex-wrap: nowrap !important;
+            a{
+                padding: 0px 10px;
+                flex-shrink: 1;
+            }
+        }
+    }
+
+    .carouselBox{
+        width: 100vw;
+        margin: auto;
+        overflow: hidden;
+
+        .carousel-item {
+            img{
+                margin: auto;
+                filter:grayscale(35%);
+                min-height: 35vw;
+                max-height: 35vw;
+            }
+        }
+
+        .carouselTxtBox{
+            text-align: center;
+            cursor: pointer;
+            h5{
+                font-size: 1.5rem;
+                font-weight: 600;
+                letter-spacing: .25rem;
+            }
+            p{
+                font-size: 1.2rem;
+                font-weight: 300;
+            }
+
+            background-color:rgba(135, 206, 235,.9);
+
+        }
+    }
+}
+
+
+@media screen and (max-width:995px){
+    body{
+        font-size: 18px;
+        .linkInfo{
+            display: none !important;
+        }
+        .mdNone{
+            display: block;
+        }        
+    }
+}
+
+@media screen and (max-width:660px){
+    body{
+        .carouselBox{
+            width: 100vw;
+            min-height:unset;
+            max-height: 65vh;
+            .carousel-item {
+                img{
+                    max-height: unset;
+                }
+            }
+            .carouselTxtBox{
+                h5{
+                    font-size: 1.2rem;
+                    font-weight: 600;
+                    letter-spacing: .15rem;
+                }
+                p{
+                    font-size: 1rem;
+                    font-weight: 300;
+                }
+            }
+        }
     }
 }
