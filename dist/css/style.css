@@ -1,0 +1,14 @@
+body {
+  font-family: 'Noto Sans TC', sans-serif;
+  font-weight: 300;
+  width: 100vw;
+  height: 100vh;
+  font-size: 24px;
+  background-image: url("../images/food.jpg");
+  background-size: cover; }
+  body h1 {
+    font-size: 10.5rem;
+    background-color: rgba(255, 255, 255, 0.3);
+    font-weight: 900; }
+
+/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoic3R5bGUuY3NzIiwic291cmNlcyI6WyJzdHlsZS5zY3NzIl0sInNvdXJjZXNDb250ZW50IjpbIiRiYXNpY0ZvbnRTaXplIDogMjRweDtcclxuXHJcbmJvZHl7XHJcbiAgICBmb250LWZhbWlseTogJ05vdG8gU2FucyBUQycsIHNhbnMtc2VyaWY7XHJcbiAgICBmb250LXdlaWdodDogMzAwO1xyXG4gICAgd2lkdGg6IDEwMHZ3O1xyXG4gICAgaGVpZ2h0OiAxMDB2aDtcclxuICAgIGZvbnQtc2l6ZTogJGJhc2ljRm9udFNpemU7XHJcbiAgICBiYWNrZ3JvdW5kLWltYWdlOiB1cmwoJy4uL2ltYWdlcy9mb29kLmpwZycpO1xyXG4gICAgYmFja2dyb3VuZC1zaXplOiBjb3ZlcjtcclxuICAgIGgxe1xyXG4gICAgICAgIGZvbnQtc2l6ZTogMTAuNXJlbTtcclxuICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2JhKDI1NSwyNTUsMjU1LC4zKTtcclxuICAgICAgICBmb250LXdlaWdodDogOTAwO1xyXG4gICAgICAgIFxyXG4gICAgfVxyXG59Il0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUVBLEFBQUEsSUFBSSxDQUFBO0VBQ0EsV0FBVyxFQUFFLDBCQUEwQjtFQUN2QyxXQUFXLEVBQUUsR0FBRztFQUNoQixLQUFLLEVBQUUsS0FBSztFQUNaLE1BQU0sRUFBRSxLQUFLO0VBQ2IsU0FBUyxFQVBJLElBQUk7RUFRakIsZ0JBQWdCLEVBQUUseUJBQXlCO0VBQzNDLGVBQWUsRUFBRSxLQUFLLEdBT3pCO0VBZEQsQUFRSSxJQVJBLENBUUEsRUFBRSxDQUFBO0lBQ0UsU0FBUyxFQUFFLE9BQU87SUFDbEIsZ0JBQWdCLEVBQUUsd0JBQW9CO0lBQ3RDLFdBQVcsRUFBRSxHQUFHLEdBRW5CIn0= */

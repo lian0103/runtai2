@@ -1,0 +1,29 @@
+{
+  "name": "newtest",
+  "version": "1.0.0",
+  "description": "none",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "author": "lien",
+  "license": "ISC",
+  "dependencies": {
+    "gulp-util": "^3.0.8",
+    "jquery": "^3.5.1",
+    "webpack-cli": "^3.3.11",
+    "gulp-imagemin": "^5.0.3"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "del": "^2.2.2",
+    "file-loader": "^6.0.0",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.4",
+    "image-webpack-loader": "^6.0.0",
+    "url-loader": "^4.1.0",
+    "webpack": "^4.43.0"
+  }
+}
