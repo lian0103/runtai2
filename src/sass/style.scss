@@ -1,7 +1,7 @@
 $mainColor:rgb(30, 157, 152);
 $secondColor:rgb(204, 204, 102);
 $mainColorOpacity:rgba(30, 157, 152,.3);
-$secondColorOpacity:rgba(204, 204, 102,.7);
+$secondColorOpacity:rgba(204, 204, 102,.3);
 
 $fontColorWhite:#fff; 
 $fontColorBlack:#323232;
@@ -129,8 +129,8 @@ body{
                 margin: 1.5rem;
                 font-weight: 300;
             }
-            background-color:rgba(135, 206, 235,.9);
-            border: 2px solid  $secondColorOpacity;
+            background-color:rgba(0, 0, 0,.4);
+            border-radius: 10px;
             background-clip: padding-box;
 
         }
@@ -141,8 +141,9 @@ body{
         padding: 35px 20px 20px 20px;
         background-clip: padding-box;
         h3{
-            text-align: center;
-            font-size: 1.1rem;
+            text-align: left;
+            padding-left: 1rem;
+            font-size: 1.2rem;
             font-weight: 700;
             color: $fontColorBlack;
             padding: .25rem .75rem;
@@ -195,6 +196,61 @@ body{
             font-size: .85rem;
             font-weight: 300;
 
+        }
+    }
+
+    .mainServiceBox{
+        padding: 1rem 20px;
+        .mainServiceBoxItem{
+            h3{
+                font-size: 1.2rem;
+                padding: .25rem 0;
+                font-weight: 600;
+                text-align: center;
+                background-color: $mainColorOpacity;
+            }
+            p{
+                font-size: .85rem;
+                font-weight: 300;
+            }
+        }
+    }
+
+    .brandPromoteBox{
+        .title{
+            h3{
+                font-weight: 600;
+                font-size: 2rem;
+                padding: 2rem 0 2rem 3rem;
+                text-shadow: 2px 2px 1px rgb(252, 253, 157);
+                position: relative;
+                span{
+                    position: absolute;
+                    top: 10px;
+                    left: 0;
+                    font-size: 3.8rem;
+                }
+            }
+        }
+
+        .imgBox{
+            img{
+                width: 100%;
+                border-radius: 50%;
+            }
+        }
+
+        .pItem{
+            min-height: 125px;
+            text-align: center;
+            font-weight: 900;
+            letter-spacing: .7rem;
+            font-size: 1.3rem;
+            span{
+                color: $mainColor;
+                font-size: 2rem;
+                padding: .25rem .75rem;
+            }
         }
     }
 }
@@ -253,6 +309,21 @@ body{
                     font-size: 1rem;
                     font-weight: 300;
                 }
+            }
+        }
+    }
+
+    .brandPromoteBox{
+        .pItem{
+            min-height: 85px;
+            text-align: center;
+            font-weight: 900;
+            letter-spacing: .7rem;
+            font-size: 1.3rem;
+            span{
+                color: $mainColor;
+                font-size: 2rem;
+                padding: 0rem .5rem;
             }
         }
     }
