@@ -168,7 +168,7 @@
         </div>
     </div>
 
-    <div class="container mt-3 brandPromoteBox">
+    <div class="container mt-3 pb-3 brandPromoteBox">
         <div class="row">
             <div class="col-12 title">
                 <h3><span>4</span>項肯定</h3>
@@ -187,7 +187,33 @@
             </div>
         </div>
     </div>
+    <div class="container mt-5 footer">
+        <div class="row">
+            <div id="googleMapBox" class="col-md-4 col-12 d-none d-md-block">
 
+            </div>
+            <div class="col-md-4 col-12 contactInfo">
+                <h3>客服資訊</h3>
+                <ul>
+                    <li> <span></span> 桃園市桃園區中正路1111號18樓 </li>
+                    <li><span></span> 0903-731-277</li>
+                    <li><span></span> 加入好友</li>
+                </ul>
+            </div>
+            <div class="col-md-4 col-12 contactInfo">
+                <h3>潤泰服務</h3>
+                <ul>
+                    <li><span></span> 借貸諮詢</li>
+                    <li><span></span> 理財規劃</li>
+                    <li><span></span> 線上試算</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    <div class="copyright">
+        Copyright © 2020 by 潤泰財富資產管理 All rights reserved ｜Design by JasonLien
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
@@ -206,6 +232,21 @@
             FontAwesome.dom.i2svg()
         })
     </script>
+    <script>
+        var map;
+        var googleMapAPIkey = 'AIzaSyArsEw53_48xmlNKPc5giGWvb6qC_0XQHE';
+        function initMap() {
+            map = new google.maps.Map(document.getElementById('googleMapBox'), {
+                center: {
+                    lat: 25.01713,
+                    lng: 121.297861
+                },
+                zoom: 16
+            });
+        }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyArsEw53_48xmlNKPc5giGWvb6qC_0XQHE&callback=initMap"
+        async defer></script>
     <script src="./dist/index.js"></script>
 </body>
 

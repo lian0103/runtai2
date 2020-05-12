@@ -14,6 +14,8 @@ $grayBackGroung : #DBDFE6;
 
 body{
     overflow-x: hidden;
+    position: relative;
+    padding-bottom: 20px;
     //font-family: 'Noto Sans TC', sans-serif;
     background-image: url('../images/bg1.png');
     background-repeat: repeat;
@@ -244,14 +246,65 @@ body{
             min-height: 125px;
             text-align: center;
             font-weight: 900;
-            letter-spacing: .7rem;
-            font-size: 1.3rem;
+            letter-spacing: .6rem;
+            font-size: 1rem;
             span{
                 color: $mainColor;
                 font-size: 2rem;
                 padding: .25rem .75rem;
             }
         }
+    }
+
+    .footer{
+        padding: .75rem 1rem;
+        position: relative;
+        #googleMapBox{
+            height: 280px;
+            min-height: 280px;
+            padding: .75rem 1rem;
+        }
+        .contactInfo{
+            h3{
+                padding: .25rem .5rem;
+                font-size: 1rem;
+                font-weight: 600;
+                color: #fff;
+                background-color: $mainColor;
+            }
+            li{
+                width: 100%;
+                font-size: .85rem;
+                font-weight: 300;
+                padding: .5rem 0;
+                text-align: center;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                height: 1rem;
+                margin-top: 1.2rem;
+                cursor: pointer;
+                span{
+                    display: block;
+                    width: 0px;
+                    height: 1rem;
+                    border: 1px solid $mainColor;
+                    margin: 0 10px;
+                }
+            }
+        }
+    }
+
+    .copyright{
+        font-size: .6rem;
+        font-weight: 300;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: #ccc;
+        text-align: center;
+        padding: 2px .25rem;
     }
 }
 
@@ -308,22 +361,38 @@ body{
                 p{
                     font-size: 1rem;
                     font-weight: 300;
+                    margin: .5rem;
+                }
+            }
+        }
+        .brandPromoteBox{
+            .pItem{
+                min-height: 85px;
+                text-align: center;
+                font-weight: 600;
+                letter-spacing: 0rem;
+                font-size: 1.3rem;
+                margin-top: 1rem;
+                span{
+                    color: $mainColor;
+                    font-size: 2rem;
+                    padding: 0rem .5rem;
                 }
             }
         }
     }
 
-    .brandPromoteBox{
-        .pItem{
-            min-height: 85px;
-            text-align: center;
-            font-weight: 900;
-            letter-spacing: .7rem;
-            font-size: 1.3rem;
-            span{
-                color: $mainColor;
-                font-size: 2rem;
-                padding: 0rem .5rem;
+
+}
+
+@media screen and (max-width:375px){
+    body{
+        .carouselBox{
+            .carouselTxtBox{
+                p{
+                    font-size: .8rem;
+                    margin: 0rem;
+                }
             }
         }
     }
