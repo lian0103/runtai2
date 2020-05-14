@@ -1,5 +1,6 @@
 
 import $ from "jquery";
+// import particlesJS from "particles.js";
 
 $(document).ready(function () {
     switchPage('mainPage',[btnInit]);
@@ -12,6 +13,12 @@ function btnInit(){
             switchPage(domStr);
         })
     })
+}
+
+window.particlesJSinit = function(){
+    particlesJS.load('wrapper-particlesJS', './src/util/particlesjs-config.json', function() {
+        console.log('callback - particles.js config loaded');
+    });
 }
 
 function switchPage(page,callbackFns = false){
