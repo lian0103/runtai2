@@ -11,8 +11,10 @@ function btnInit(){
         let domStr = $(this).attr('data-link');
         $(this).click(function(){
             switchPage(domStr);
+            let isPhoneSize = window.innerWidth <= 800 ? true : false;
+            if(isPhoneSize){$('#btn-menu').click();}
         })
-    })
+    });
 }
 
 window.particlesJSinit = function(){
@@ -21,7 +23,7 @@ window.particlesJSinit = function(){
     });
 }
 
-function switchPage(page,callbackFns = false){
+window.switchPage = function(page,callbackFns = false){
     if(page == null){
         return
     }
@@ -32,7 +34,6 @@ function switchPage(page,callbackFns = false){
             window.location.hash = 'mainPage';
         break;
         case "carLoan":
-            
             window.location.hash = 'carLoan';
             $('#app').load('./src/pages/carLoan.html'); 
         break;
