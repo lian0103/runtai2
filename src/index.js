@@ -19,6 +19,11 @@ window.winReload = function(){
     window.location.reload();
 }
 
+window.srcollToBottom = function(){
+    console.log('1');
+    window.scrollTo(0,2000);
+}
+
 window.particlesJSinit = function(){
     particlesJS.load('wrapper-particlesJS', './src/util/particlesjs-config.json', function() {
         console.log('callback - particles.js config loaded');
