@@ -54,7 +54,7 @@
             </ul>
         </div>
         <div class="col-md-8 col-12 serviceBox">
-            <h3 class="typewrite" data-period="2000" data-type='[ "3大服務","快速審核" ]'></h3>
+            <h3 class="typewrite" data-period="3500" data-type='[ "3大服務","快速審核" ]'></h3>
             <div class="info mt-2 d-flex"><span>信用借貸</span><span>汽車借貸</span><span>資金周轉</span></div>
             <div class="infotxt">
                 實際貸款條件，仍以銀行提供之產品為準，且每一顧客實際之年百分率仍以其個別貸款產品及授信條件而有所不同。
@@ -135,7 +135,7 @@
         // INJECT CSS
         var css = document.createElement("style");
         css.type = "text/css";
-        css.innerHTML = ".typewrite > .wrap { padding:0px 10px; border-right: .5rem solid #444}";
+        css.innerHTML = ".typewrite > .wrap { padding:0px 10px;";
         document.body.appendChild(css);
     }
 
@@ -199,7 +199,7 @@
     document.addEventListener('turbolinks:load', function () { FontAwesome.dom.i2svg() });
     document.addEventListener('scroll', startAni, false);
     $('#nt-title').newsTicker({
-        row_height: 33,
+        row_height: 44,
         max_rows: 3,
         duration: 3000,
         pauseOnHover: 1
