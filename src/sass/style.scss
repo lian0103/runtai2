@@ -169,7 +169,7 @@ body{
             padding: .25rem .75rem;
             background-color:$grayBackGroung;
         }
-        ul{
+        #nt-title{
             li{
                 font-weight: 300;
                 font-size: .85rem;
@@ -178,6 +178,9 @@ body{
                     content: ' · ';
                     color: $mainColor;
                     font-size: 1.4rem;
+                }
+                &:hover span{
+                    border-bottom: 1px solid $mainColor;
                 }
             }
         }
@@ -362,6 +365,29 @@ body{
         }
     }
 }
+
+#QAModal{
+    .modal-header{
+        border-bottom: none;
+    }
+    .modal-title{
+        font-size: 1.6rem;
+        font-weight: 600;
+    }
+    
+    .modal-body{
+        font-weight: 300;
+        font-size: 1.1rem;
+        line-height: 2rem;
+    }
+
+    .modal-footer{
+        border-top: none;
+    }
+}
+
+
+
 
 @media screen and (max-width:995px){
     body{

@@ -1,6 +1,4 @@
-
-import $ from "jquery";
-// import particlesJS from "particles.js";
+import QAlist from './util/QAlist'
 
 $(document).ready(function () {
     switchPage('mainPage',[btnInit]);
@@ -68,3 +66,5 @@ window.switchPage = function(page,callbackFns = false){
         $(this).addClass('active');
     })
 }
+
+window.QAlist = QAlist;

@@ -44,10 +44,13 @@
     <div class="row">
         <div class="col-md-4 col-12 newsBox">
             <h3>最新消息</h3>
-            <ul>
-                <li>本身在銀行信用有瑕疵可以辦理嗎？</li>
-                <li>有車子可是想借錢，要向誰借呢？</li>
-                <li>申請貸款人需要有什麼條件呢？</li>
+            <ul id="nt-title">
+                <li><span onclick="openQAModel('1')">本身在銀行信用有瑕疵可以辦理嗎？</span></li>
+                <li><span onclick="openQAModel('2')">有車子可是想借錢，要向誰借呢？</span></li>
+                <li><span onclick="openQAModel('3')">申請貸款人需要有什麼條件呢？</span></li>
+                <li><span onclick="openQAModel('4')">汽車貸款有什麼優點？</span></li>
+                <li><span onclick="openQAModel('5')">借二胎房貸，需要提供什麼資訊？</span></li>
+                <li><span onclick="openQAModel('6')">什麼狀況會需要申辦信用貸款?</span></li>
             </ul>
         </div>
         <div class="col-md-8 col-12 serviceBox">
@@ -195,5 +198,24 @@
     textAnimation();
     document.addEventListener('turbolinks:load', function () { FontAwesome.dom.i2svg() });
     document.addEventListener('scroll', startAni, false);
+    $('#nt-title').newsTicker({
+        row_height: 33,
+        max_rows: 3,
+        duration: 3000,
+        pauseOnHover: 1
+    });
+
+    function openQAModel(dataIndex){
+        for(let i=0;i<QAlist.length;i++){
+            if(dataIndex == QAlist[i].id){
+                let title = QAlist[i].qTitle;
+                let content =QAlist[i].aContent;
+                $('#QAModal .modal-title').html(title);
+                $('#QAModal .modal-body').html(content);
+                $('#QAModal').modal('show');
+                return true;
+            }
+        }
+    }
 
 </script>
