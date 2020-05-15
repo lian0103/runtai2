@@ -15,6 +15,10 @@ function btnInit(){
     });
 }
 
+window.winReload = function(){
+    window.location.reload();
+}
+
 window.particlesJSinit = function(){
     particlesJS.load('wrapper-particlesJS', './src/util/particlesjs-config.json', function() {
         console.log('callback - particles.js config loaded');
