@@ -8,7 +8,7 @@ $fontColorBlack:#323232;
 
 $fontSizeSmall: 14px;
 $fontSizeMedium: 16px;
-$fontSizeTitle: 24px;
+$fontSizeTitle: 26px;
 
 $grayBackGroung : #DBDFE6;
 
@@ -455,7 +455,7 @@ body{
 
 @media screen and (max-width:660px){
     body{
-        font-size: 18px !important;
+        font-size: 22px !important;
         .carouselBox{
             width: 100vw;
             min-height:unset;
@@ -509,11 +509,11 @@ body{
 
         .modal-title{
             font-size: 1.4rem;
-            font-weight: 900;
+            font-weight: 600;
         }
         
         .modal-body{
-            font-weight: 600;
+            font-weight: 300;
             font-size: .9rem;
             line-height: 1.8rem;
         }
@@ -523,7 +523,7 @@ body{
 
 @media screen and (max-width:375px){
     body{
-        font-size: 16px !important;
+        font-size: 20px !important;
         .carouselBox{
             .carouselTxtBox{
                 p{
