@@ -1,4 +1,4 @@
-$mainColor:rgb(30, 157, 152);
+$mainColor:#1e9d98;
 $secondColor:rgb(204, 204, 102);
 $mainColorOpacity:rgba(30, 157, 152,.3);
 $secondColorOpacity:rgba(204, 204, 102,.3);
@@ -92,9 +92,9 @@ body{
         }
         .logoImg{
             width: 50px;
+            height: 44px;
             padding: 0 3px;
             display: inline-block;
-            border-radius: 50%;
             cursor: pointer;
         }
         span{
@@ -107,7 +107,7 @@ body{
             line-height: 70px;
             text-shadow: 2px 1px 1px rgba(0,0,0,0.2);
             position: relative;
-            &::before{
+            &:nth-child(2)::before{
                 content: 'RUNTAI';
                 position: absolute;
                 left: 6px;
@@ -129,6 +129,16 @@ body{
                 padding: 0px 10px;
                 flex-shrink: 1;
             }
+        }
+        #btn-menu{
+            padding: .2rem;
+            font-size: .8rem;
+            line-height: .7;
+            outline: none;
+            border: none;
+        }
+        li{
+            margin: .15rem 0;
         }
     }
 
@@ -408,6 +418,9 @@ body{
 @media screen and (max-width:995px){
     body{
         font-size: 22px;
+        .navbarSecond{
+            padding-bottom: .25rem;
+        }
         .linkInfo{
             display: none !important;
         }
