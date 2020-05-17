@@ -33,7 +33,7 @@ body{
     position: relative;
     padding-bottom: 20px;
     //font-family: 'Noto Sans TC', sans-serif;
-    background-image: url('../images/bg1.png');
+    // background-image: url('../images/bg1.png');
     background-repeat: repeat;
     background-size: cover;
     font-family: 'Noto Serif TC', serif;
@@ -417,6 +417,7 @@ body{
 
 @media screen and (max-width:995px){
     body{
+        background-image: url('../images/bg1.png');
         font-size: 22px;
         .navbarSecond{
             padding-bottom: .25rem;
