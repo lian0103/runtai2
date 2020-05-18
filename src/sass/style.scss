@@ -73,22 +73,28 @@ body{
         display: block;
         padding: 0 12px;
         color: $fontColorBlack;
+        transition: .3s;
+        border-radius: 15px;
         cursor: pointer;
         &:hover,&.active{
-            color: #fff !important;
-            background-color: $mainColor;
+            color: $mainColor !important;
+            background-color: #fff;
         }
     }
 
     .navbarSecond{
-        background-color: $secondColor !important;
+        z-index: 100;
+        background-color: transparent;
         .navLogo{
             display: inline-block;
             padding: 0rem .25rem;
-            min-width: 30vw;
+            min-width: 400px;
             height: 65px;
             position: relative;
             bottom: 5px;
+            @media screen and (max-width:600px)  {
+                min-width: 350px;
+            }
         }
         .logoImg{
             width: 50px;
@@ -99,10 +105,11 @@ body{
         }
         span{
             color: $fontColorWhite;
-            letter-spacing: .4rem;
+            white-space:nowrap;
+            letter-spacing: .6rem;
             font-size: 1.3rem;
-            line-height: 1.5;
-            font-weight: normal;
+            line-height: 1.4;
+            font-weight: 900;
             height: 70px;
             line-height: 70px;
             text-shadow: 2px 1px 1px rgba(0,0,0,0.2);
@@ -128,6 +135,7 @@ body{
             a{
                 padding: 0px 10px;
                 flex-shrink: 1;
+                color: #fff;
             }
         }
         #btn-menu{
@@ -144,15 +152,15 @@ body{
 
     .carouselBox{
         overflow: hidden;
-        max-width: 1100px;
+        max-width: 1960px;
         margin: auto;
-        padding: 10px 0;
+        padding: 0px 0 15px 0;
         .carousel-item {
             img{
                 margin: auto;
-                filter:grayscale(35%);
+                filter:grayscale(45%);
                 min-height: 35vw;
-                max-height: 35vw;
+                max-height: calc(100vh - 160px);
             }
         }
 
@@ -179,8 +187,8 @@ body{
     }
 
     .newsBox{
-        margin-top: 20px;
-        padding: 35px 20px 20px 20px;
+        margin-top: 0px;
+        padding: 20px 20px 20px 20px;
         background-clip: padding-box;
         h3{
             text-align: left;
@@ -213,7 +221,7 @@ body{
         h3{
             font-weight: 600;
             font-size: 2.6rem;
-            padding: 2rem 1rem;
+            padding: 5px 1rem;
             text-shadow: 2px 2px 1px rgb(252, 253, 157);
             position: relative;
         }
@@ -420,7 +428,7 @@ body{
         background-image: url('../images/bg1.png');
         font-size: 22px;
         .navbarSecond{
-            padding-bottom: .25rem;
+            padding: 2px 10px;
         }
         .linkInfo{
             display: none !important;
@@ -430,7 +438,21 @@ body{
         }
         .carouselBox{
             padding: 15px 0;
-        }  
+        } 
+        .linkSpanBox{
+            background-color: $mainColorOpacity;
+            text-align: center;
+        }
+        .btnToFooter {
+            border: 1px solid #fff;
+            border-radius: 15px;
+            color: #fff;
+            font-size: .75rem;
+            font-weight: 600;
+            background-color: transparent;
+            outline: transparent;
+            margin: auto;
+        }
     }
     .serviceBox{
         .info{
@@ -457,6 +479,11 @@ body{
 @media screen and (max-width:660px){
     body{
         font-size: 22px !important;
+        .navbarSecond {
+            span{
+                font-size: 1rem;
+            }
+        }
         .carouselBox{
             width: 100vw;
             min-height:unset;
@@ -525,6 +552,18 @@ body{
 @media screen and (max-width:375px){
     body{
         font-size: 20px !important;
+        .navbarSecond {
+            .logoImg {
+                width: 44px;
+            }
+            span {
+                font-size: .8rem;
+                letter-spacing: 0.3rem;
+                &:nth-child(2)::before{
+                    letter-spacing: 1rem;
+                }
+            }
+        }
         .carouselBox{
             .carouselTxtBox{
                 p{
@@ -537,6 +576,111 @@ body{
 }
 
 
+.fixMove{
+    position: relative;
+    bottom: 65px;
+}
+
+.changeNavBar{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    background-color: $mainColor !important;
+    .navLogo{
+        display: inline-block;
+        padding: 0rem .25rem;
+        min-width: 400px;
+        height: 65px;
+        position: relative;
+        bottom: 5px;
+        @media screen and (max-width:600px)  {
+            min-width: 350px;
+        }
+    }
+    .logoImg{
+        width: 50px;
+        height: 44px;
+        padding: 0 3px;
+        display: inline-block;
+        cursor: pointer;
+    }
+    span{
+        color: $fontColorWhite;
+        letter-spacing: .6rem;
+        font-size: 1.3rem;
+        line-height: 1.4;
+        font-weight: 900;
+        height: 70px;
+        line-height: 70px;
+        text-shadow: 2px 1px 1px rgba(0,0,0,0.2);
+        position: relative;
+        &:nth-child(2)::before{
+            content: 'RUNTAI';
+            position: absolute;
+            left: 6px;
+            bottom: 16px;
+            font-size: .6rem;
+            font-weight: 300;
+            text-shadow:none;
+            letter-spacing: 2rem;
+            text-align: center;
+            width: 100%;
+            height: 14px;
+
+        }
+    }
+}
+
+.changeNavBarForOtherPage{
+    background-color: $mainColor;
+    .navLogo{
+        display: inline-block;
+        padding: 0rem .25rem;
+        min-width: 400px;
+        height: 65px;
+        position: relative;
+        bottom: 5px;
+        @media screen and (max-width:600px)  {
+            min-width: 350px;
+        }
+    }
+    .logoImg{
+        width: 50px;
+        height: 44px;
+        padding: 0 3px;
+        display: inline-block;
+        cursor: pointer;
+    }
+    span{
+        color: $fontColorWhite;
+        letter-spacing: .6rem;
+        font-size: 1.3rem;
+        line-height: 1.4;
+        font-weight: 900;
+        height: 70px;
+        line-height: 70px;
+        text-shadow: 2px 1px 1px rgba(0,0,0,0.2);
+        position: relative;
+        &:nth-child(2)::before{
+            content: 'RUNTAI';
+            position: absolute;
+            left: 6px;
+            bottom: 16px;
+            font-size: .6rem;
+            font-weight: 300;
+            text-shadow:none;
+            letter-spacing: 2rem;
+            text-align: center;
+            width: 100%;
+            height: 14px;
+
+        }
+    }
+}
+.bgInit{
+    background-color: $mainColor !important;
+}
 /* ----------------------------------------------
  * Generated by Animista on 2020-5-14 10:32:37
  * Licensed under FreeBSD License.

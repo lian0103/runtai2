@@ -1,6 +1,19 @@
 import QAlist from './util/QAlist'
+var windowWidth =window.innerWidth ;
+var isPhoneSize = window.innerWidth <= 800 ? true : false;
 
 $(document).ready(function () {
+    window.addEventListener('resize',function(){
+        let nowWidth = window.innerWidth;
+        if(!isPhoneSize && nowWidth <= 995){
+            window.location.reload();
+        }else if(isPhoneSize && nowWidth>995){
+            window.location.reload();
+        }
+    },false);
+    window.addEventListener('scroll',function(){
+        changeNavBar('mainPage');
+    },false);
     switchPage('mainPage',[btnInit]);
 })
 
@@ -9,10 +22,29 @@ function btnInit(){
         let domStr = $(this).attr('data-link');
         $(this).click(function(){
             switchPage(domStr);
-            let isPhoneSize = window.innerWidth <= 800 ? true : false;
             if(isPhoneSize){$('#btn-menu').click();}
         })
     });
+}
+
+window.changeNavBar = function(page){
+    let bodyTop =window.pageYOffset;
+    console.log(bodyTop);
+    if(bodyTop>=80){
+        if(page=="mainPage"){
+            $('.navbarSecond').addClass('changeNavBar')
+        }else{
+            $('.navbarSecond').addClass('changeNavBarForOtherPage');
+        }
+        
+    }else{
+        if(page=="mainPage"){
+            $('.navbarSecond').removeClass('changeNavBar')
+        }else{
+            $('.navbarSecond').removeClass('changeNavBarForOtherPage');
+        }
+        
+    }
 }
 
 window.winReload = function(){
@@ -20,7 +52,6 @@ window.winReload = function(){
 }
 
 window.srcollToBottom = function(){
-    console.log('1');
     window.scrollTo(0,2000);
 }
 
@@ -34,15 +65,19 @@ window.switchPage = function(page,callbackFns = false){
     if(page == null){
         return
     }
-
+    $('#app').removeClass('fixMove');
+    $('.navbarSecond').addClass('bgInit')
     switch (page){
         case "mainPage":
             $('#app').load('./src/pages/mainPage.html');
             window.location.hash = 'mainPage';
+            if(!isPhoneSize){
+                $('.navbarSecond').removeClass('bgInit')
+            }
         break;
         case "carLoan":
             window.location.hash = 'carLoan';
-            $('#app').load('./src/pages/carLoan.html'); 
+            $('#app').load('./src/pages/carLoan.html');
         break;
         case "creditLoanPage":
             $('#app').load('./src/pages/creditLoanPage.html');
