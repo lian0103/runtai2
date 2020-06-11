@@ -12,6 +12,10 @@ $fontSizeTitle: 26px;
 
 $grayBackGroung : #DBDFE6;
 
+body{
+    font-weight: 600;
+}
+
 #app{
     // min-height: 100vh;
     position: relative;
@@ -74,7 +78,6 @@ body{
         padding: 0 12px;
         color: $fontColorBlack;
         transition: .3s;
-        border-radius: 15px;
         cursor: pointer;
         &:hover,&.active{
             color: $mainColor !important;
@@ -196,23 +199,34 @@ body{
         padding: 20px 20px 20px 20px;
         background-clip: padding-box;
         h3{
-            text-align: left;
-            padding-left: 1rem;
             font-size: 1.2rem;
             font-weight: 700;
             color: $fontColorBlack;
-            padding: .25rem .75rem;
+            padding: .5rem 1rem;
+            text-align: center;
             background-color:$grayBackGroung;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            span{
+                text-align: center;
+                flex:1 0 unset;
+            }
         }
         #nt-title{
             li{
-                font-weight: 300;
-                font-size: .85rem;
+                font-weight: 600;
+                font-size: 1rem;
+                padding: .25rem 1.5rem;
+                position: relative;
                 cursor: pointer;
                 &:before{
                     content: ' · ';
                     color: $mainColor;
-                    font-size: 1.4rem;
+                    font-size: 1rem;
+                    position: absolute;
+                    top: 5px;
+                    left: 10px;
                 }
                 &:hover span{
                     border-bottom: 1px solid $mainColor;
@@ -225,7 +239,7 @@ body{
         color: $fontColorBlack;
         h3{
             font-weight: 600;
-            font-size: 2.6rem;
+            font-size: 2.2rem;
             padding: 5px 1rem;
             text-shadow: 2px 2px 1px rgb(252, 253, 157);
             position: relative;
@@ -233,19 +247,28 @@ body{
         .info{
             justify-content: space-between;
             align-items: center;
-            span{
+            div{
                 display: block;
                 margin: 0px 2rem;
                 font-size: 1.2rem;
                 padding: .25rem .5rem;
-                background-color: $mainColor;
-                color: #fff;
+                // background-color: $mainColor;
+                color: #444;
                 position: relative;
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                font-weight: 600;
+                span{
+                    width: 100%;
+                    color: $mainColor;
+                    font-size: 2rem;
+                }
             }
         }
         .infotxt{
             padding-top: 1.2rem;
-            font-size: .85rem;
+            font-size: .5rem;
             font-weight: 300;
 
         }
@@ -308,42 +331,79 @@ body{
     }
 
     .footer{
-        padding: .75rem 1rem;
+        padding: 0;
         position: relative;
-        #googleMapBox{
-            height: 280px;
-            min-height: 280px;
-            padding: .75rem 1rem;
-        }
-        .contactInfo{
-            h3{
-                padding: .25rem .5rem;
-                font-size: 1rem;
-                font-weight: 600;
-                color: #fff;
-                background-color: $mainColor;
-            }
-            li{
-                width: 100%;
-                font-size: .85rem;
-                font-weight: 300;
-                padding: .5rem 0;
-                text-align: center;
+        padding-bottom: 30px;
+        background-color: #F5F5F5;
+
+        .footerTop{
+            background-color: #F5F5F5;
+            
+            padding: .5rem 2rem ;
+            .left{
+                color: rgb(112, 111, 111);
                 display: flex;
-                justify-content: flex-start;
-                align-items: center;
-                height: 1rem;
-                margin-top: 1.2rem;
-                cursor: pointer;
                 span{
-                    display: block;
-                    width: 0px;
-                    height: 1rem;
-                    border: 1px solid $mainColor;
-                    margin: 0 10px;
+                    flex:0 0 50%;
+                    font-size: 1.5rem;
+                    padding-bottom: 2rem ;
+                    letter-spacing: 1.3rem;
+                    font-weight: 900;
+                }
+            }
+            .right{
+                font-size: .75rem;
+                color: #666;
+                font-weight: 600;
+                line-height: 2;
+                p{
+                    padding: 0rem .75rem;
                 }
             }
         }
+
+        .footerDown{
+            background-color: #EEEEEE;
+            display: flex;
+            justify-content: space-around;
+            #googleMapBox{
+                height: 280px;
+                min-height: 280px;
+                padding: .75rem 1rem;
+                flex: 1 0 200px;
+            }
+            .contactInfo{
+                h3{
+                    padding: .25rem .5rem;
+                    font-size: 1rem;
+                    font-weight: 600;
+                    color: #fff;
+                    background-color: $mainColor;
+                }
+                li{
+                    width: 100%;
+                    font-size: .85rem;
+                    font-weight: 300;
+                    padding: .5rem 0;
+                    text-align: center;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    height: 1rem;
+                    margin-top: 1.2rem;
+                    cursor: pointer;
+                    span{
+                        display: block;
+                        width: 0px;
+                        height: 1rem;
+                        border: 1px solid $mainColor;
+                        margin: 0 10px;
+                    }
+                }
+            }
+        }
+
+
     }
 
     .copyright{
@@ -353,9 +413,12 @@ body{
         position: absolute;
         bottom: 0;
         left: 0;
-        background-color: #ccc;
+        // background-color: #ccc;
         text-align: center;
-        padding: 2px .25rem;
+        color: #fff;
+        padding: 15px .25rem;
+        background-image: url('../images/footerbg.gif');
+        background-repeat: no-repeat;
     }
 }
 
