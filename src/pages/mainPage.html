@@ -56,9 +56,9 @@
         <div class="col-md-7 col-12 serviceBox">
             <h3 data-period="3500" >常用服務</h3>
             <div class="info mt-2 d-flex">
-                <div><span><i class="fab fa-facebook-f"></i></span>個人借貸</div>
-                <div><span><i class="fab fa-facebook-f"></i></span>汽車借貸</div> 
-                <div><span><i class="fab fa-facebook-f"></i></span>線上諮詢</div> 
+                <div><img src="/dist/images/loan_man.svg" alt="">個人借貸</div>
+                <div><img src="/dist/images/loan_car.svg" alt=""></span>汽車借貸</div> 
+                <div><img src="/dist/images/advisor.svg" alt=""></span>線上諮詢</div> 
             </div>
             <div class="infotxt">
                 實際貸款條件，仍以銀行提供之產品為準，且每一顧客實際之年百分率仍以其個別貸款產品及授信條件而有所不同。
@@ -202,8 +202,11 @@
     textAnimation();
     document.addEventListener('turbolinks:load', function () { FontAwesome.dom.i2svg() });
     document.addEventListener('scroll', startAni, false);
+
+    var isUnderPasSize = window.innerWidth < 800 ? true : false;
+
     $('#nt-title').newsTicker({
-        row_height: 44,
+        row_height: isUnderPasSize ? 60 : 44,
         max_rows: 3,
         duration: 3000,
         pauseOnHover: 1
