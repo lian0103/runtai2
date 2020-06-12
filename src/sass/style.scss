@@ -1,4 +1,5 @@
 $mainColor:#1e9d98;
+$mainColor2:#009d99;
 $secondColor:rgb(204, 204, 102);
 $mainColorOpacity:rgba(30, 157, 152,.3);
 $secondColorOpacity:rgba(204, 204, 102,.3);
@@ -6,15 +7,14 @@ $secondColorOpacity:rgba(204, 204, 102,.3);
 $fontColorWhite:#fff; 
 $fontColorBlack:#323232;
 
+$gray1:#EEEEEE;
+$gray2:#F5F5F5;
+
 $fontSizeSmall: 14px;
 $fontSizeMedium: 16px;
 $fontSizeTitle: 26px;
 
 $grayBackGroung : #DBDFE6;
-
-body{
-    font-weight: 600;
-}
 
 #app{
     // min-height: 100vh;
@@ -41,11 +41,11 @@ body{
     background-repeat: repeat;
     background-size: cover;
     font-family: 'Noto Serif TC', serif;
-    font-weight: 300;
     width: 100vw;
     // min-height: 100vh;
     font-size: $fontSizeTitle;
     background-size: cover;
+    font-weight: 600;
     .navbar{
         background-color: $grayBackGroung;
         padding-top: 0;
@@ -420,6 +420,76 @@ body{
         padding: 15px .25rem;
         background-image: url('../images/footerbg.gif');
         background-repeat: no-repeat;
+    }
+}
+
+.newPage{
+    padding: 2rem 0;
+    .customListGroup{
+        background-color: $gray2;
+        .active{
+            background-color: $gray2;
+            border-color:$gray1;
+            color: $mainColor;
+        }
+    }
+    .rightBlock{
+        h2{
+            width: 100%;
+            padding: 0 10px 10px;
+            border-bottom: $mainColor2 2px solid;
+            color: $mainColor2;
+            font-size: 2rem;
+            font-weight: 900;
+            margin-bottom: 20px;
+            letter-spacing: .2rem;
+        }
+        .mainInfo{
+            p{
+                font-size: 14px;
+                line-height: 20px;
+                &::before{
+                    content: '\2022';
+                    color: #009d99;
+                    margin-left: -14px;
+                    float: left;
+                }
+            }
+        }
+        .myTable{
+            width: 100%;
+            margin-bottom: 1rem;
+            
+            th{
+                width: 30%;
+                background: #7fb0ec;
+                color: white;
+                font-weight: 900;
+                text-align: center;
+            }
+            td{
+                text-align: left;
+                padding: 0 1rem;
+            }
+            th,td{
+                border: 1px solid #e5e5e5;
+            }
+        }
+        .noteInfo{
+            h3{
+                cursor: pointer;
+                line-height: 40px;
+                border: 1px solid #e6e6e6;
+                display: inline-block;
+                width: 100%;
+                font-size: 15px;
+                color: #666666;
+                background: none;
+                font-weight: bold;
+                box-sizing: border-box;
+                padding-left: 2rem;
+            }
+        }
     }
 }
 

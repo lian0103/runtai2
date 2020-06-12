@@ -1,0 +1,73 @@
+<div class="wrapper" id="wrapper-particlesJS">
+</div>
+<div class="container newPage">
+    <div class="row">
+        <div class="col-md-3 d-none d-md-block">
+            <ul class="list-group list-group-flush customListGroup">
+                <li class="list-group-item active">1txt</li>
+                <li class="list-group-item">2txt</li>
+                <li class="list-group-item">3txt</li>
+                <li class="list-group-item">4txt</li>
+            </ul>
+        </div>
+        <div class="col-md-9 col-12 rightBlock">
+            <h2>titleH2</h2>
+            <div class="mainInfo">
+                <p>線上申請最快一天取得審核結果，把握機會不等貸！</p>
+                <p>免保人、免擔保品，貸款免求人！</p>
+            </div>
+
+            <table class="myTable">
+                <tbody>
+                    <tr>
+                        <th>txt</th>
+                        <td>txt</td>
+                    </tr>
+                    <tr>
+                        <th>txt</th>
+                        <td>txt</td>
+                    </tr>
+                    <tr>
+                        <th>txt</th>
+                        <td>txt</td>
+                    </tr>
+                    <tr>
+                        <th>txt</th>
+                        <td>txt</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="noteInfo">
+                <h3 data-toggle="collapse" data-target="#collapseExample" aria-expanded="false"
+                    aria-controls="collapseExample">
+                    Button with data-target
+                </h3>
+
+                <div class="collapse" id="collapseExample">
+                    <div class="card card-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+                        Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea
+                        proident.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    window.particlesJSinit();
+
+    $(document).ready(function () {
+        $('.customListGroup li').each(function (i, e) {
+            $(e).click(function () {
+                $('.customListGroup li').each(function (i, e) {
+                    $(e).removeClass('active');
+                })
+                $(this).addClass('active');
+            })
+        })
+
+    });
+
+</script>

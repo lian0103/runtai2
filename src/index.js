@@ -29,7 +29,7 @@ function btnInit(){
 
 window.changeNavBar = function(page){
     let bodyTop =window.pageYOffset;
-    console.log(bodyTop);
+    // console.log(bodyTop);
     if(bodyTop>=80){
         if(page=="mainPage"){
             $('.navbarSecond').addClass('changeNavBar')
@@ -90,6 +90,10 @@ window.switchPage = function(page,callbackFns = false){
         case "secondOrderLoan":
             $('#app').load('./src/pages/secondOrderLoan.html');
             window.location.hash = 'secondOrderLoan';
+        break;
+        case "new":
+            $('#app').load('./src/pages/new.html');
+            window.location.hash = 'new';
         break;
     }
 
